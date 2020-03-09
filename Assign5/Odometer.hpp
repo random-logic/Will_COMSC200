@@ -5,11 +5,11 @@
 
 class Odometer {
   private:
-    int milage;
+    int mileage;
     FuelGauge *fuelGauge;
   public:
     Odometer(FuelGauge *_fuelGauge);
-    int getMilage();
+    int getMileage();
     void addMile();
     ~Odometer();
 };

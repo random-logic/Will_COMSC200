@@ -4,14 +4,24 @@
 #include "Odometer.hpp"
 
 Odometer::Odometer(FuelGauge *_fuelGauge) {
-  milage = 0;
+  mileage = 0;
   fuelGauge = _fuelGauge;
 }
 
-int Odometer::getMilage() {
+int Odometer::getMileage() {
+  return mileage;
 }
 
 void Odometer::addMile() {
+  if (mileage < 999999) {
+    mileage++;
+    if (mileage % 24 == 0) {
+      fuelGauge->dec1Gal();
+    }
+  }
+  else {
+    mileage = 0;
+  }
 }
 
 Odometer::~Odometer() {

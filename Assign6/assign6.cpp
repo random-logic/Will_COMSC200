@@ -11,7 +11,7 @@ int main() {
   int count = 1;
   while (deck.moreCards()) {
     std::cout.width(20);
-    std::cout << deck.dealCard().toString();
+    std::cout << std::left << deck.dealCard().toString();
     if (count++ % 4 == 0) {
       std::cout << std::endl;
     }

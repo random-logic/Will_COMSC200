@@ -12,6 +12,7 @@ Card::Card(int _face, int _suit) {
 }
 
 std::string Card::toString() {
+  return faces[face] + " of " + suits[suit];
 }
 
 #endif //CARD_CPP

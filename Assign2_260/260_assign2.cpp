@@ -24,6 +24,7 @@ string dec_to_hex(int);
 
 int main() 
 {
+	cout.flush();
 	
 	cout<<"10000011 binary = "<<bin_to_dec("10000011")<<" decimal\n"; // you should get 131
 	cout<<"01010101 binary = "<<bin_to_dec("01010101")<<" decimal\n"; // you should get 85
@@ -81,11 +82,11 @@ string dec_to_bin(int n)
 
 	for (int i = str_len - 1; i >= 0; i++) {
 		if (n >= pow(2, i)) {
-			str += 1;
+			str += "1";
 			n -= pow(2, i);
 		}
 		else {
-			str += 0;
+			str += "0";
 		}
 	}
 
@@ -101,7 +102,7 @@ int hex_to_dec(string s)
 
 	int str_index = 0;
 	for (int i = s.length() - 1; i >= 0; i++) {
-		string digit_str = getString(s.at(str_index));
+		string digit_str(1, s.at(str_index));
 		str_index++;
 
 		int digit;
@@ -131,7 +132,7 @@ int hex_to_dec(string s)
 
 string dec_to_hex(int n)  
 {
-	str = "";
+	string str = "";
 
 	while (true) {
 		int number = n % 16;

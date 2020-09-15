@@ -1,0 +1,6 @@
+Download this for Windows 10: https://visualstudio.microsoft.com/
+During Installation: Install optional Desktop development with C++
+After Installation: Open Developer Command Prompt for VS
+Command: cl /EHsc [filename(s)]
+
+Walkthrough Tutorial: https://docs.microsoft.com/en-us/cpp/build/walkthrough-compiling-a-native-cpp-program-on-the-command-line?view=vs-2019

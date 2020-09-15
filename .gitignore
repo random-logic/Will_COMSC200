@@ -1,4 +1,8 @@
 #object files
 *.obj
-**/Debug
+
+#Visual Studio
+**/[Dd]ebug
+**/.vs
+*.vcxproj
 *.vcxproj.*

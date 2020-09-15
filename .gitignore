@@ -1,2 +1,4 @@
 #object files
 *.obj
+*/Debug
+*.vcxproj.*

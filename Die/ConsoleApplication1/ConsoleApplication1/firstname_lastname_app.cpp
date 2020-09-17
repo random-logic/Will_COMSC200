@@ -1,7 +1,5 @@
-// Die.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-#ifndef CPP
-#define CPP
+#ifndef APP_CPP
+#define APP_CPP
 
 #include <iostream>
 #include <string>
@@ -19,15 +17,19 @@ int main()
 	do {
 		die.roll();
 		ai_pts += die.getValue();
+
 		die.roll();
 		play_pts += die.getValue();
+
 		cout << "Your points: " << play_pts << endl;
-		if (play_pts > 21) {
+
+		if (play_pts > 21)
 			break;
-		}
+
 		cout << "AI points: Unknown" << endl;
 		cout << "Do you want to roll again? (Put Y or y if yes, N or n if no) ";
 		getline(cin, ans);
+
 	} while (ans.at(0) == 'y' || ans.at(0) == 'Y');
 
 	cout << "AI points: " << ai_pts << endl;

@@ -10,16 +10,21 @@ using namespace std;
 int main()
 {
 	int ai_pts = 0, play_pts = 0;
-	Die die(6);
+	Die die1(6);
+	Die die2(6);
 	string ans;
 
 	//comment
 	do {
-		die.roll();
-		ai_pts += die.getValue();
-
-		die.roll();
-		play_pts += die.getValue();
+		die1.roll();
+		die2.roll();
+		ai_pts += die1.getValue();
+		ai_pts += die2.getValue();
+		
+		die1.roll();
+		die2.roll();
+		play_pts += die1.getValue();
+		play_pts += die2.getValue();
 
 		cout << "Your points: " << play_pts << endl;
 

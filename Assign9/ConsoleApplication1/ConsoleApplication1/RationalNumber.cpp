@@ -121,15 +121,20 @@ bool RationalNumber::operator != (RationalNumber other) const {
 	return !(*this == other);
 }
 
-void RationalNumber::printRational() {
-	cout << numerator << "/" << denominator;
-}
-
 RationalNumber& RationalNumber::operator =(RationalNumber other) {
 	this->numerator = other.numerator;
 	this->denominator = other.denominator;
 
 	return *this;
+}
+
+void RationalNumber::printRational() const {
+	if (this->numerator == 0 & this->denominator != 0)
+		cout << "0";
+	else if (this->denominator == 1)
+		cout << this->numerator;
+	else
+		cout << this->numerator << "/" << this->denominator;
 }
 
 #endif //RATIONALNUMBER_CPP

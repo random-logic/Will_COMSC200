@@ -26,7 +26,7 @@ public:
 	bool operator != (RationalNumber other) const;
 	RationalNumber& operator = (RationalNumber other);
 
-	void printRational();
+	void printRational() const;
 };
 
 #endif //RATIONALNUMBER_H

@@ -1,2 +1,6 @@
 #object files
 *.obj
+
+#Visual Studio
+**/[Dd]ebug
+**/.vs
